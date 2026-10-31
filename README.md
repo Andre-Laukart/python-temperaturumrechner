@@ -8,3 +8,4 @@ Ein kleines Python-Übungsprojekt für die Konsole. Das Programm rechnet Tempera
 - Benutzereingaben mit input()
 - while-Schleifen und Bedingungen mit if und elif
 - Variablen und einfache mathematische Berechnungen
+- Im ersten Entwurf habe ich ein Wörterbuch verwendet, um die Umrechnungswerte zu speichern.
