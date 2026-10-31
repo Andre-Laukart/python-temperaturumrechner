@@ -1,27 +1,27 @@
-# Temperaturumrechner
+print("--------- Teperatur Umrechner ---------")
 
-faktor = 1.8
-offset = 32
-
-print("--------- Temperaturumrechner ---------")
+konst = {
+    "1.8": 1.8,
+    "32": 32
+}
 
 while True:
-    print("\nWie möchtest du umrechnen?")
-    print("1 = Celsius in Fahrenheit")
-    print("2 = Fahrenheit in Celsius")
-    auswahl = input("Bitte 1, 2 oder B zum Beenden eingeben: ").lower()
+    print("\n--- wie möchtest du Umrechen? ----")
+    print("\n  1 = °C in °F / 2. = °F in °C")
+    x = input("\nBitte eingeben 1 oder 2 / Beenden = B : ")
 
-    if auswahl == "1":
-        celsius = float(input("Wie viel °C soll umgerechnet werden?: "))
-        fahrenheit = celsius * faktor + offset
-        print(f"{celsius} °C entsprechen {fahrenheit} °F")
-    elif auswahl == "2":
-        fahrenheit = float(input("Wie viel °F soll umgerechnet werden?: "))
-        celsius = (fahrenheit - offset) / faktor
-        print(f"{fahrenheit} °F entsprechen {celsius} °C")
-    elif auswahl == "b":
+    if x in ["1"]:
+        z = float(input("Wie viel °C soll umgerechnet werden?: "))
+        print(f'--- {z * konst["1.8"] + konst["32"]} °F --- sind aus {z}°C' )
+
+    elif x in ["2"]:
+        e = float(input("Wie viel °F soll umgerechnet werden?:  "))
+        print(f'--- {(e - konst["32"]) / konst["1.8"]} °C --- sind aus {e}°F')
+
+    elif x in ["b", "B"]:
         break
-    else:
-        print("Ungültige Auswahl. Bitte 1, 2 oder B eingeben.")
 
-print("\n------ Programm beendet ------")
+    else:
+        print("\n ! --- ! Fehler ! --- !")
+
+print("\n------ Beendet ------")
